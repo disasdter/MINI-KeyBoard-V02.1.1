@@ -1,0 +1,5 @@
+# Local build output
+Src/bin/
+
+# Visual Studio user state
+.vs/

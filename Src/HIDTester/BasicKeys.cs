@@ -56,6 +56,18 @@ public class BasicKeys : UserControl
   private Button KEY_F3;
   private Button KEY_F2;
   private Button KEY_F1;
+  private Button KEY_F13;
+  private Button KEY_F14;
+  private Button KEY_F15;
+  private Button KEY_F16;
+  private Button KEY_F17;
+  private Button KEY_F18;
+  private Button KEY_F19;
+  private Button KEY_F20;
+  private Button KEY_F21;
+  private Button KEY_F22;
+  private Button KEY_F23;
+  private Button KEY_F24;
   private Button KEY_ESC;
   private Button KEY_PrtSc;
   private Button KEY_PauseBreak;
@@ -589,6 +601,90 @@ public class BasicKeys : UserControl
     this.General_Char_Set();
   }
 
+  private void KEY_F13_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 104;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F13";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F14_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 105;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F14";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F15_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 106;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F15";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F16_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 107;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F16";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F17_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 108;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F17";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F18_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 109;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F18";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F19_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 110;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F19";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F20_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 111;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F20";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F21_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 112;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F21";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F22_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 113;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F22";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F23_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 114;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F23";
+    this.General_Char_Set();
+  }
+
+  private void KEY_F24_Click(object sender, EventArgs e)
+  {
+    FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 115;
+    FormMain.KeyParam.KeyChar[(int) FormMain.KeyParam.KEY_Char_Num - 5] = "F24";
+    this.General_Char_Set();
+  }
+
   private void KEY_PrtSc_Click(object sender, EventArgs e)
   {
     FormMain.KeyParam.Data_Send_Buff[(int) FormMain.KeyParam.KEY_Char_Num] = (byte) 70;
@@ -888,6 +984,18 @@ public class BasicKeys : UserControl
     this.KEY_F3 = new Button();
     this.KEY_F2 = new Button();
     this.KEY_F1 = new Button();
+    this.KEY_F13 = new Button();
+    this.KEY_F14 = new Button();
+    this.KEY_F15 = new Button();
+    this.KEY_F16 = new Button();
+    this.KEY_F17 = new Button();
+    this.KEY_F18 = new Button();
+    this.KEY_F19 = new Button();
+    this.KEY_F20 = new Button();
+    this.KEY_F21 = new Button();
+    this.KEY_F22 = new Button();
+    this.KEY_F23 = new Button();
+    this.KEY_F24 = new Button();
     this.KEY_ESC = new Button();
     this.KEY_PrtSc = new Button();
     this.KEY_PauseBreak = new Button();
@@ -1276,6 +1384,90 @@ public class BasicKeys : UserControl
     this.KEY_F1.Text = "F1";
     this.KEY_F1.UseVisualStyleBackColor = true;
     this.KEY_F1.Click += new EventHandler(this.KEY_F1_Click);
+    this.KEY_F13.Location = new Point(4, 239);
+    this.KEY_F13.Name = "KEY_F13";
+    this.KEY_F13.Size = new Size(45, 23);
+    this.KEY_F13.TabIndex = 101;
+    this.KEY_F13.Text = "F13";
+    this.KEY_F13.UseVisualStyleBackColor = true;
+    this.KEY_F13.Click += new EventHandler(this.KEY_F13_Click);
+    this.KEY_F14.Location = new Point(55, 239);
+    this.KEY_F14.Name = "KEY_F14";
+    this.KEY_F14.Size = new Size(45, 23);
+    this.KEY_F14.TabIndex = 102;
+    this.KEY_F14.Text = "F14";
+    this.KEY_F14.UseVisualStyleBackColor = true;
+    this.KEY_F14.Click += new EventHandler(this.KEY_F14_Click);
+    this.KEY_F15.Location = new Point(106, 239);
+    this.KEY_F15.Name = "KEY_F15";
+    this.KEY_F15.Size = new Size(45, 23);
+    this.KEY_F15.TabIndex = 103;
+    this.KEY_F15.Text = "F15";
+    this.KEY_F15.UseVisualStyleBackColor = true;
+    this.KEY_F15.Click += new EventHandler(this.KEY_F15_Click);
+    this.KEY_F16.Location = new Point(157, 239);
+    this.KEY_F16.Name = "KEY_F16";
+    this.KEY_F16.Size = new Size(45, 23);
+    this.KEY_F16.TabIndex = 104;
+    this.KEY_F16.Text = "F16";
+    this.KEY_F16.UseVisualStyleBackColor = true;
+    this.KEY_F16.Click += new EventHandler(this.KEY_F16_Click);
+    this.KEY_F17.Location = new Point(208, 239);
+    this.KEY_F17.Name = "KEY_F17";
+    this.KEY_F17.Size = new Size(45, 23);
+    this.KEY_F17.TabIndex = 105;
+    this.KEY_F17.Text = "F17";
+    this.KEY_F17.UseVisualStyleBackColor = true;
+    this.KEY_F17.Click += new EventHandler(this.KEY_F17_Click);
+    this.KEY_F18.Location = new Point(259, 239);
+    this.KEY_F18.Name = "KEY_F18";
+    this.KEY_F18.Size = new Size(45, 23);
+    this.KEY_F18.TabIndex = 106;
+    this.KEY_F18.Text = "F18";
+    this.KEY_F18.UseVisualStyleBackColor = true;
+    this.KEY_F18.Click += new EventHandler(this.KEY_F18_Click);
+    this.KEY_F19.Location = new Point(310, 239);
+    this.KEY_F19.Name = "KEY_F19";
+    this.KEY_F19.Size = new Size(45, 23);
+    this.KEY_F19.TabIndex = 107;
+    this.KEY_F19.Text = "F19";
+    this.KEY_F19.UseVisualStyleBackColor = true;
+    this.KEY_F19.Click += new EventHandler(this.KEY_F19_Click);
+    this.KEY_F20.Location = new Point(361, 239);
+    this.KEY_F20.Name = "KEY_F20";
+    this.KEY_F20.Size = new Size(45, 23);
+    this.KEY_F20.TabIndex = 108;
+    this.KEY_F20.Text = "F20";
+    this.KEY_F20.UseVisualStyleBackColor = true;
+    this.KEY_F20.Click += new EventHandler(this.KEY_F20_Click);
+    this.KEY_F21.Location = new Point(412, 239);
+    this.KEY_F21.Name = "KEY_F21";
+    this.KEY_F21.Size = new Size(45, 23);
+    this.KEY_F21.TabIndex = 109;
+    this.KEY_F21.Text = "F21";
+    this.KEY_F21.UseVisualStyleBackColor = true;
+    this.KEY_F21.Click += new EventHandler(this.KEY_F21_Click);
+    this.KEY_F22.Location = new Point(463, 239);
+    this.KEY_F22.Name = "KEY_F22";
+    this.KEY_F22.Size = new Size(45, 23);
+    this.KEY_F22.TabIndex = 110;
+    this.KEY_F22.Text = "F22";
+    this.KEY_F22.UseVisualStyleBackColor = true;
+    this.KEY_F22.Click += new EventHandler(this.KEY_F22_Click);
+    this.KEY_F23.Location = new Point(514, 239);
+    this.KEY_F23.Name = "KEY_F23";
+    this.KEY_F23.Size = new Size(45, 23);
+    this.KEY_F23.TabIndex = 111;
+    this.KEY_F23.Text = "F23";
+    this.KEY_F23.UseVisualStyleBackColor = true;
+    this.KEY_F23.Click += new EventHandler(this.KEY_F23_Click);
+    this.KEY_F24.Location = new Point(565, 239);
+    this.KEY_F24.Name = "KEY_F24";
+    this.KEY_F24.Size = new Size(45, 23);
+    this.KEY_F24.TabIndex = 112;
+    this.KEY_F24.Text = "F24";
+    this.KEY_F24.UseVisualStyleBackColor = true;
+    this.KEY_F24.Click += new EventHandler(this.KEY_F24_Click);
     this.KEY_ESC.Location = new Point(4, 5);
     this.KEY_ESC.Name = "KEY_ESC";
     this.KEY_ESC.Size = new Size(45, 23);
@@ -1699,6 +1891,18 @@ public class BasicKeys : UserControl
     this.Controls.Add((Control) this.KEY_F3);
     this.Controls.Add((Control) this.KEY_F2);
     this.Controls.Add((Control) this.KEY_F1);
+    this.Controls.Add((Control) this.KEY_F24);
+    this.Controls.Add((Control) this.KEY_F23);
+    this.Controls.Add((Control) this.KEY_F22);
+    this.Controls.Add((Control) this.KEY_F21);
+    this.Controls.Add((Control) this.KEY_F20);
+    this.Controls.Add((Control) this.KEY_F19);
+    this.Controls.Add((Control) this.KEY_F18);
+    this.Controls.Add((Control) this.KEY_F17);
+    this.Controls.Add((Control) this.KEY_F16);
+    this.Controls.Add((Control) this.KEY_F15);
+    this.Controls.Add((Control) this.KEY_F14);
+    this.Controls.Add((Control) this.KEY_F13);
     this.Controls.Add((Control) this.KEY_0);
     this.Controls.Add((Control) this.KEY_8);
     this.Controls.Add((Control) this.KEY_7);

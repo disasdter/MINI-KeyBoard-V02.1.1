@@ -1,0 +1,21 @@
+stages:
+  - build
+
+# Requires a Windows runner with Visual Studio Build Tools and the .NET desktop workload.
+build_release:
+  stage: build
+  script:
+    - $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+    - if (-not (Test-Path $vswhere)) { throw "vswhere.exe not found. Install Visual Studio Build Tools on the Windows runner." }
+    - $msbuild = & $vswhere -latest -products '*' -requires Microsoft.Component.MSBuild -find 'MSBuild\**\Bin\MSBuild.exe' | Select-Object -First 1
+    - if ([string]::IsNullOrWhiteSpace($msbuild)) { throw "MSBuild not found. Install the .NET desktop build tools on the Windows runner." }
+    - '& $msbuild "Src\MINI KeyBoard.sln" /t:Restore /p:Configuration=Release /v:minimal'
+    - if ($LASTEXITCODE -ne 0) { throw "NuGet restore failed with exit code $LASTEXITCODE" }
+    - '& $msbuild "Src\MINI KeyBoard.sln" /t:Build /p:Configuration=Release /v:minimal'
+    - if ($LASTEXITCODE -ne 0) { throw "Build failed with exit code $LASTEXITCODE" }
+  artifacts:
+    when: on_success
+    name: "MINI-KeyBoard-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - Src/bin/Release/
+    expire_in: 30 days
